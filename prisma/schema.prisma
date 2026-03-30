@@ -8,7 +8,10 @@ datasource db {
   provider = "postgresql" 
 }
 
-// 3. Kullanıcılar Tablosu (Users)
+// ----------------------------------------------------------------------
+// 👤 KULLANICI VE ERİŞİM SİSTEMİ (Önceki Tablolar)
+// ----------------------------------------------------------------------
+
 model User {
   id            String   @id @default(cuid()) 
   username      String   @unique              
@@ -18,13 +21,12 @@ model User {
   isVip         Int      @default(0)          
   isCorporate   Int      @default(0)          
   cookieId      String?  @unique              
-  trackingId    String?  @unique              
+  trackingId    String?  @unique // Analitik tablosundaki trackingId ile eşleşebilir
   roleColor     String?                       
   createdAt     DateTime @default(now())      
   updatedAt     DateTime @updatedAt           
 }
 
-// 4. Erişim Kodları Tablosu (Access Codes - Yeni kayıtlar için)
 model AccessCode {
   id             Int      @id @default(autoincrement())
   code           String   @unique              
@@ -37,7 +39,6 @@ model AccessCode {
   createdAt      DateTime @default(now())
 }
 
-// 5. Giriş/Kurtarma Kodları Tablosu (Login Codes - Var olan hesaplar için)
 model LoginCode {
   id              Int      @id @default(autoincrement())
   code            String   @unique              
@@ -46,4 +47,44 @@ model LoginCode {
   isPasswordReset Boolean  @default(false)      
   isAdminLogin    Boolean  @default(false)      
   createdAt       DateTime @default(now())
+}
+
+// ----------------------------------------------------------------------
+// 🕵️ HASAN YUSUF'UN ÖZEL ANALİTİK VE TAKİP SİSTEMİ (Yeni Tablolar)
+// ----------------------------------------------------------------------
+
+// 1. Ziyaretçi Kimliği (Core dosyasının işleyeceği çerez/cihaz verileri)
+model UserInfo {
+  id          String   @id @default(cuid())
+  trackingId  String   @unique // Kullanıcıya atanan o "kalıcı" ve değişmeyen çerez ID'si
+  ipAddress   String?  // Kullanıcının IP adresi
+  country     String?  // iplocation.io vb. servislerden gelen Ülke
+  city        String?  // Şehir
+  userAgent   String?  // Tarayıcı ve İşletim Sistemi bilgisi
+  browserLang String?  // Tarayıcının varsayılan dili (Örn: tr, en, de)
+  deviceType  String?  // Mobile, Desktop, Tablet vb.
+  lastVisit   DateTime @default(now()) // Siteye son giriş yaptığı an (Her girişte güncellenir)
+  createdAt   DateTime @default(now()) // Siteye ilk girdiği an (Değişmez)
+}
+
+// 2. Sayfa Ziyaret Geçmişi (Kullanıcının site içindeki yolculuğu)
+model UserPageRecord {
+  id         Int      @id @default(autoincrement())
+  trackingId String   // Hangi ziyaretçi? (UserInfo'daki trackingId ile eşleşir)
+  path       String   // Hangi sayfaya girdi? (Örn: /portfolio/e-ticaret, /contact)
+  referrer   String?  // Siteye nereden geldi? (Google, doğrudan link, vb.)
+  stepOrder  Int      // Bu sayfaya kaçıncı sırada girdi? (1. sayfa, 2. sayfa...)
+  visitedAt  DateTime @default(now()) // Sayfaya girdiği tam tarih ve saat
+}
+
+// 3. Genel Sayfa İstatistikleri (Sadece senin admin panelinde göreceğin sayaçlar)
+model PageAnalytic {
+  id        Int      @id @default(autoincrement())
+  path      String   @unique // Örn: /home, /portfolio/proje-1
+  daily     Int      @default(0) // Günlük ziyaretçi
+  weekly    Int      @default(0) // Haftalık ziyaretçi
+  monthly   Int      @default(0) // Aylık ziyaretçi
+  yearly    Int      @default(0) // Yıllık ziyaretçi
+  total     Int      @default(0) // Tüm zamanların toplamı
+  updatedAt DateTime @updatedAt  // Sayacın en son güncellendiği zaman
 }

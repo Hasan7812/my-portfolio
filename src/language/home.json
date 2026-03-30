@@ -1,0 +1,102 @@
+{
+  "tr": {
+    "greeting": "Merhaba, Ben",
+    "description": "15 yaşında tutkulu bir Full-Stack Geliştiriciyim. İşletmeler için modern, hızlı ve güvenli web teknolojileri üretiyorum.",
+    "btn_projects": "Projeleri Görüntüle",
+    "btn_contact": "Bize Ulaşın",
+    "why_work_title": "Neden Birlikte Çalışmalıyız?",
+    "why_work_text": "\"Henüz resmi bir şirket deneyimim yok ama onlarca projeyi kendi başıma, en güncel teknolojilerle başarıyla kodladım. Neden ilk mutlu müşterim sen olmayasın?\"",
+    "featured_title": "Öne Çıkan Çalışmalarım",
+    "loading_image": "Görsel Yükleniyor..."
+  },
+  "en": {
+    "greeting": "Hello, I am",
+    "description": "I am a 15-year-old passionate Full-Stack Developer. I build modern, fast, and secure web technologies for businesses.",
+    "btn_projects": "View Projects",
+    "btn_contact": "Contact Us",
+    "why_work_title": "Why Work Together?",
+    "why_work_text": "\"I don't have official corporate experience yet, but I have successfully coded dozens of projects on my own using the latest technologies. Why shouldn't you be my first happy client?\"",
+    "featured_title": "Featured Works",
+    "loading_image": "Loading Image..."
+  },
+  "de": {
+    "greeting": "Hallo, ich bin",
+    "description": "Ich bin ein 15-jähriger leidenschaftlicher Full-Stack-Entwickler. Ich erstelle moderne, schnelle und sichere Webtechnologien für Unternehmen.",
+    "btn_projects": "Projekte ansehen",
+    "btn_contact": "Kontaktiere uns",
+    "why_work_title": "Warum zusammenarbeiten?",
+    "why_work_text": "\"Ich habe noch keine offizielle Unternehmenserfahrung, aber ich habe Dutzende von Projekten mit den neuesten Technologien erfolgreich selbst programmiert. Warum solltest du nicht mein erster glücklicher Kunde sein?\"",
+    "featured_title": "Ausgewählte Arbeiten",
+    "loading_image": "Bild wird geladen..."
+  },
+  "ru": {
+    "greeting": "Здравствуйте, я",
+    "description": "Мне 15 лет, я увлеченный Full-Stack разработчик. Я создаю современные, быстрые и безопасные веб-технологии для бизнеса.",
+    "btn_projects": "Посмотреть проекты",
+    "btn_contact": "Связаться с нами",
+    "why_work_title": "Почему стоит работать вместе?",
+    "why_work_text": "\"У меня еще нет официального корпоративного опыта, но я успешно запрограммировал десятки проектов самостоятельно, используя новейшие технологии. Почему бы вам не стать моим первым счастливым клиентом?\"",
+    "featured_title": "Избранные работы",
+    "loading_image": "Загрузка изображения..."
+  },
+  "fr": {
+    "greeting": "Bonjour, je suis",
+    "description": "Je suis un développeur Full-Stack passionné de 15 ans. Je conçois des technologies web modernes, rapides et sécurisées pour les entreprises.",
+    "btn_projects": "Voir les projets",
+    "btn_contact": "Contactez-nous",
+    "why_work_title": "Pourquoi travailler ensemble ?",
+    "why_work_text": "\"Je n'ai pas encore d'expérience officielle en entreprise, mais j'ai codé avec succès des dizaines de projets par moi-même avec les dernières technologies. Pourquoi ne seriez-vous pas mon premier client satisfait ?\"",
+    "featured_title": "Travaux en vedette",
+    "loading_image": "Chargement de l'image..."
+  },
+  "es": {
+    "greeting": "Hola, soy",
+    "description": "Soy un apasionado desarrollador Full-Stack de 15 años. Construyo tecnologías web modernas, rápidas y seguras para empresas.",
+    "btn_projects": "Ver Proyectos",
+    "btn_contact": "Contáctenos",
+    "why_work_title": "¿Por qué trabajar juntos?",
+    "why_work_text": "\"Todavía no tengo experiencia corporativa oficial, pero he codificado con éxito docenas de proyectos por mi cuenta utilizando las últimas tecnologías. ¿Por qué no deberías ser mi primer cliente feliz?\"",
+    "featured_title": "Trabajos Destacados",
+    "loading_image": "Cargando imagen..."
+  },
+  "zh": {
+    "greeting": "你好，我是",
+    "description": "我是一名15岁的全栈开发者。我为企业构建现代、快速且安全的网络技术。",
+    "btn_projects": "查看项目",
+    "btn_contact": "联系我们",
+    "why_work_title": "为什么合作？",
+    "why_work_text": "“我还没有正式的企业经验，但我已经使用最新技术独立成功编写了数十个项目。为什么你不成为我的第一个快乐客户呢？”",
+    "featured_title": "精选作品",
+    "loading_image": "图片加载中..."
+  },
+  "az": {
+    "greeting": "Salam, Mən",
+    "description": "15 yaşlı həvəsli Full-Stack İnkişaf etdiriciyəm. Bizneslər üçün müasir, sürətli və təhlükəsiz veb texnologiyaları yaradıram.",
+    "btn_projects": "Layihələrə Bax",
+    "btn_contact": "Bizimlə Əlaqə",
+    "why_work_title": "Niyə Birlikdə İşləməliyik?",
+    "why_work_text": "\"Hələ rəsmi şirkət təcrübəm yoxdur, amma onlarla layihəni ən son texnologiyalarla təkbaşına uğurla kodlamışam. Niyə ilk xoşbəxt müştərim siz olmayasınız?\"",
+    "featured_title": "Seçilmiş İşlərim",
+    "loading_image": "Şəkil Yüklənir..."
+  },
+  "kk": {
+    "greeting": "Сәлем, мен",
+    "description": "Мен 15 жастағы құмар Full-Stack әзірлеушімін. Бизнес үшін заманауи, жылдам және қауіпсіз веб-технологияларды жасаймын.",
+    "btn_projects": "Жобаларды көру",
+    "btn_contact": "Бізбен байланыс",
+    "why_work_title": "Неге бірге жұмыс істеуіміз керек?",
+    "why_work_text": "\"Менде әлі ресми корпоративтік тәжірибе жоқ, бірақ мен ең жаңа технологияларды қолдана отырып, ондаған жобаларды өзім сәтті кодтадым. Неге сіз менің алғашқы бақытты тұтынушым болмасқа?\"",
+    "featured_title": "Таңдаулы жұмыстарым",
+    "loading_image": "Сурет жүктелуде..."
+  },
+  "hi": {
+    "greeting": "नमस्ते, मैं हूँ",
+    "description": "मैं 15 साल का एक जुनूनी फुल-स्टैक डेवलपर हूँ। मैं व्यवसायों के लिए आधुनिक, तेज़ और सुरक्षित वेब तकनीक बनाता हूँ।",
+    "btn_projects": "प्रोजेक्ट देखें",
+    "btn_contact": "हमसे संपर्क करें",
+    "why_work_title": "साथ मिलकर काम क्यों करें?",
+    "why_work_text": "\"मेरे पास अभी तक कोई आधिकारिक कॉर्पोरेट अनुभव नहीं है, लेकिन मैंने नवीनतम तकनीकों के साथ दर्जनों प्रोजेक्ट्स को सफलतापूर्वक कोड किया है। आप मेरे पहले खुश ग्राहक क्यों नहीं हो सकते?\"",
+    "featured_title": "प्रमुख कार्य",
+    "loading_image": "छवि लोड हो रही है..."
+  }
+}
