@@ -1,5 +1,5 @@
-# 1. Node.js imajını kullan
-FROM node:20-alpine AS builder
+# 1. Node.js 22 imajını kullan (Hata almamak için yükselttik)
+FROM node:22-alpine AS builder
 WORKDIR /app
 
 # 2. Bağımlılıkları yükle
@@ -13,7 +13,7 @@ RUN npx prisma generate
 RUN npm run build
 
 # 4. Çalıştırma aşaması
-FROM node:20-alpine AS runner
+FROM node:22-alpine AS runner
 WORKDIR /app
 COPY --from=builder /app ./
 
