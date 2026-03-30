@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, MapPin, Calendar, Rocket, Heart, Code2, Terminal, Cpu, Globe2 } from "lucide-react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, Variants } from "framer-motion";
 
 export default function InfoPage() {
   const [mounted, setMounted] = useState(false);
@@ -31,7 +31,8 @@ export default function InfoPage() {
     }
   }, []);
 
-  const containerVariants = {
+  // TypeScript'i rahatlatan o ufak ama etkili çözümler ("as const" eklendi)
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -39,16 +40,16 @@ export default function InfoPage() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { type: "spring", stiffness: 80, damping: 20 }
+      transition: { type: "spring" as const, stiffness: 80, damping: 20 }
     },
   };
 
-  const scrollVariants = {
+  const scrollVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,

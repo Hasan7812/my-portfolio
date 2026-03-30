@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Mail, Briefcase, CheckCircle2, Code2, Server, Zap, Database, Layout, Smartphone, ChevronRight } from "lucide-react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { ArrowRight, Mail, Briefcase, CheckCircle2, Code2, Server, Zap, Layout, Smartphone, ChevronRight } from "lucide-react";
+import { motion, useScroll, useSpring, Variants } from "framer-motion";
 import homeData from "../language/home.json";
 
 type LangKey = keyof typeof homeData;
@@ -36,7 +36,7 @@ export default function Home() {
     }
   }, []);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -44,16 +44,16 @@ export default function Home() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { type: "spring", stiffness: 100, damping: 20 }
+      transition: { type: "spring" as const, stiffness: 100, damping: 20 }
     },
   };
 
-  const scrollVariants = {
+  const scrollVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
