@@ -1,0 +1,112 @@
+{
+  "tr": {
+    "back": "Geri Dön",
+    "title": "Hakkımda",
+    "subtitle": "Yolculuğumu, yeteneklerimi ve kodlarıma yön veren tutkuyu keşfedin.",
+    "about_title": "Ben Kimim?",
+    "about_desc": "Ölçeklenebilir, modern ve kullanıcı dostu web uygulamaları geliştirmeye adanmış tutkulu bir Full-Stack Geliştiriciyim. Hem ön yüz (frontend) hem de arka yüz (backend) teknolojilerindeki güçlü temelimle, harika tasarımları kusursuz işlevsellikle birleştiriyorum.",
+    "mission_title": "Misyonum",
+    "mission_desc": "Gerçek dünya sorunlarını çözen ve kusursuz dijital deneyimler yaratan temiz, sürdürülebilir ve yüksek performanslı kodlar üretmek.",
+    "vision_title": "Vizyonum",
+    "vision_desc": "Sürekli öğrenmek, yeni teknolojilere hızlıca adapte olmak ve web'in geleceğini şekillendiren yenilikçi projelere imza atmak."
+  },
+  "en": {
+    "back": "Go Back",
+    "title": "About Me",
+    "subtitle": "Discover my journey, skills, and the passion that drives my code.",
+    "about_title": "Who am I?",
+    "about_desc": "I am a passionate Full-Stack Developer dedicated to building scalable, modern, and user-friendly web applications. With a strong foundation in both frontend and backend technologies, I bridge the gap between design and robust functionality.",
+    "mission_title": "My Mission",
+    "mission_desc": "To deliver clean, maintainable, and highly performant code that solves real-world problems and creates seamless digital experiences.",
+    "vision_title": "My Vision",
+    "vision_desc": "To continuously learn, adapt to new technologies, and contribute to innovative projects that shape the future of the web."
+  },
+  "de": {
+    "back": "Zurück",
+    "title": "Über mich",
+    "subtitle": "Entdecken Sie meine Reise, meine Fähigkeiten und die Leidenschaft, die meinen Code antreibt.",
+    "about_title": "Wer bin ich?",
+    "about_desc": "Ich bin ein leidenschaftlicher Full-Stack-Entwickler, der sich der Erstellung skalierbarer, moderner und benutzerfreundlicher Webanwendungen verschrieben hat. Mit einem starken Fundament in Frontend- und Backend-Technologien schließe ich die Lücke zwischen Design und robuster Funktionalität.",
+    "mission_title": "Meine Mission",
+    "mission_desc": "Sauberen, wartbaren und hochleistungsfähigen Code zu liefern, der reale Probleme löst und nahtlose digitale Erlebnisse schafft.",
+    "vision_title": "Meine Vision",
+    "vision_desc": "Kontinuierlich zu lernen, mich an neue Technologien anzupassen und zu innovativen Projekten beizutragen, die die Zukunft des Webs gestalten."
+  },
+  "ru": {
+    "back": "Назад",
+    "title": "Обо мне",
+    "subtitle": "Узнайте о моем пути, навыках и страсти, которая движет моим кодом.",
+    "about_title": "Кто я?",
+    "about_desc": "Я увлеченный Full-Stack разработчик, занимающийся созданием масштабируемых, современных и удобных веб-приложений. Обладая прочным фундаментом в технологиях фронтенда и бэкенда, я устраняю разрыв между дизайном и надежной функциональностью.",
+    "mission_title": "Моя миссия",
+    "mission_desc": "Создавать чистый, поддерживаемый и высокопроизводительный код, который решает реальные проблемы и обеспечивает бесперебойный цифровой опыт.",
+    "vision_title": "Мое видение",
+    "vision_desc": "Постоянно учиться, адаптироваться к новым технологиям и вносить вклад в инновационные проекты, формирующие будущее интернета."
+  },
+  "fr": {
+    "back": "Retour",
+    "title": "À propos de moi",
+    "subtitle": "Découvrez mon parcours, mes compétences et la passion qui anime mon code.",
+    "about_title": "Qui suis-je ?",
+    "about_desc": "Je suis un développeur Full-Stack passionné, dédié à la création d'applications web évolutives, modernes et conviviales. Avec de solides bases dans les technologies frontend et backend, je fais le pont entre le design et des fonctionnalités robustes.",
+    "mission_title": "Ma mission",
+    "mission_desc": "Fournir un code propre, maintenable et très performant qui résout des problèmes concrets et crée des expériences numériques fluides.",
+    "vision_title": "Ma vision",
+    "vision_desc": "Apprendre continuellement, m'adapter aux nouvelles technologies et contribuer à des projets innovants qui façonnent l'avenir du web."
+  },
+  "es": {
+    "back": "Volver",
+    "title": "Sobre mí",
+    "subtitle": "Descubre mi viaje, mis habilidades y la pasión que impulsa mi código.",
+    "about_title": "¿Quién soy?",
+    "about_desc": "Soy un desarrollador Full-Stack apasionado dedicado a construir aplicaciones web escalables, modernas y fáciles de usar. Con una sólida base en tecnologías frontend y backend, cierro la brecha entre el diseño y la funcionalidad robusta.",
+    "mission_title": "Mi misión",
+    "mission_desc": "Entregar código limpio, mantenible y de alto rendimiento que resuelva problemas del mundo real y cree experiencias digitales perfectas.",
+    "vision_title": "Mi visión",
+    "vision_desc": "Aprender continuamente, adaptarme a las nuevas tecnologías y contribuir a proyectos innovadores que dan forma al futuro de la web."
+  },
+  "zh": {
+    "back": "返回",
+    "title": "关于我",
+    "subtitle": "探索我的旅程、技能以及驱动我编写代码的热情。",
+    "about_title": "我是谁？",
+    "about_desc": "我是一名充满热情的全栈开发人员，致力于构建可扩展、现代且用户友好的 Web 应用程序。凭借在前端和后端技术方面的坚实基础，我在设计和强大的功能之间架起了一座桥梁。",
+    "mission_title": "我的使命",
+    "mission_desc": "提供干净、可维护和高性能的代码，解决现实世界的问题并创造无缝的数字体验。",
+    "vision_title": "我的愿景",
+    "vision_desc": "不断学习、适应新技术，并为塑造 Web 未来的创新项目做出贡献。"
+  },
+  "az": {
+    "back": "Geri Qayıt",
+    "title": "Haqqımda",
+    "subtitle": "Səyahətimi, bacarıqlarımı və kodlarıma yön verən ehtirası kəşf edin.",
+    "about_title": "Mən Kiməm?",
+    "about_desc": "Ölçeklənə bilən, müasir və istifadəçi dostu veb tətbiqləri hazırlamağa həsr olunmuş ehtiraslı bir Full-Stack Geliştiricisiyəm. Həm frontend, həm də backend texnologiyalarındakı güclü təməlimlə dizayn və möhkəm funksionallıq arasında körpü yaradıram.",
+    "mission_title": "Missiyam",
+    "mission_desc": "Real dünya problemlərini həll edən və qüsursuz rəqəmsal təcrübələr yaradan təmiz, davamlı və yüksək performanslı kodlar istehsal etmək.",
+    "vision_title": "Vizyonum",
+    "vision_desc": "Davamlı öyrənmək, yeni texnologiyalara sürətlə uyğunlaşmaq və vebin gələcəyini formalaşdıran innovativ layihələrə imza atmaq."
+  },
+  "kk": {
+    "back": "Артқа қайту",
+    "title": "Мен туралы",
+    "subtitle": "Менің жолымды, дағдыларымды және кодтарымды басқаратын құмарлықты ашыңыз.",
+    "about_title": "Мен кіммін?",
+    "about_desc": "Мен ауқымды, заманауи және пайдаланушыға ыңғайлы веб-қосымшаларды жасауға арналған құмар Full-Stack әзірлеушісімін. Frontend және backend технологияларындағы мықты іргетасыммен мен дизайн мен қуатты функционалдылық арасындағы көпірді құрамын.",
+    "mission_title": "Менің миссиям",
+    "mission_desc": "Нақты әлемдегі мәселелерді шешетін және мінсіз цифрлық тәжірибелер жасайтын таза, қолдауға оңай және жоғары өнімді код жазу.",
+    "vision_title": "Менің көзқарасым",
+    "vision_desc": "Үнемі үйрену, жаңа технологияларға бейімделу және вебтің болашағын қалыптастыратын инновациялық жобаларға үлес қосу."
+  },
+  "hi": {
+    "back": "वापस जाएँ",
+    "title": "मेरे बारे में",
+    "subtitle": "मेरी यात्रा, कौशल और मेरे कोड को प्रेरित करने वाले जुनून की खोज करें।",
+    "about_title": "मैं कौन हूँ?",
+    "about_desc": "मैं एक भावुक फुल-स्टैक डेवलपर हूँ जो स्केलेबल, आधुनिक और उपयोगकर्ता के अनुकूल वेब एप्लिकेशन बनाने के लिए समर्पित है। फ्रंटएंड और बैकएंड दोनों तकनीकों में एक मजबूत नींव के साथ, मैं डिजाइन और मजबूत कार्यक्षमता के बीच की खाई को पाटता हूँ।",
+    "mission_title": "मेरा मिशन",
+    "mission_desc": "स्वच्छ, बनाए रखने योग्य और उच्च प्रदर्शन वाला कोड देना जो वास्तविक दुनिया की समस्याओं को हल करता है और सहज डिजिटल अनुभव बनाता है।",
+    "vision_title": "मेरा विजन",
+    "vision_desc": "लगातार सीखना, नई तकनीकों के अनुकूल होना और वेब के भविष्य को आकार देने वाली नवीन परियोजनाओं में योगदान देना।"
+  }
+}
