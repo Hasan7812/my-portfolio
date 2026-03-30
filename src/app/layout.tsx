@@ -1,150 +1,137 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import { Globe, LayoutDashboard, Briefcase, Mail, LogIn, ChevronUp, Info } from "lucide-react";
-import CookieBanner from "@/components/CookieBanner";
+import { ThemeProvider } from "../components/ThemeProvider";
+import { ThemeToggle } from "../components/ThemeToggle";
+import { User, Mail, ShieldCheck, Github, Linkedin, Instagram, Home } from "lucide-react";
 
+// Google Fonts'tan modern ve jilet gibi bir font çekiyoruz
+const jakarta = Plus_Jakarta_Sans({ 
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: 'swap',
+});
+
+// Mobil cihazlarda tarayıcı çubuğu rengini temaya göre ayarlıyoruz
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FAFAFA" },
+    { media: "(prefers-color-scheme: dark)", color: "#020617" }
+  ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
+// Full SEO ve Sosyal Medya Meta Etiketleri
 export const metadata: Metadata = {
-  title: "Hasan Yusuf Barutcu | Portfolio",
-  description: "Full-Stack Developer",
+  title: {
+    template: "%s | Hasan Yusuf Barutcu",
+    default: "Hasan Yusuf Barutcu | Full-Stack Developer",
+  },
+  description: "Modern, hızlı, güvenli web uygulamaları ve profesyonel portfolyo.",
+  keywords: ["Hasan Yusuf Barutcu", "Frontend", "Backend", "Full-Stack", "Developer", "Next.js", "React", "Portfolio"],
+  authors: [{ name: "Hasan Yusuf Barutcu" }],
+  creator: "Hasan Yusuf Barutcu",
+  openGraph: {
+    type: "website",
+    locale: "tr_TR",
+    url: "https://hasanyusufbarutcu.com.tr",
+    title: "Hasan Yusuf Barutcu | Portfolyo",
+    description: "Modern teknolojilerle geliştirilmiş, jilet gibi bir portfolyo deneyimi.",
+    siteName: "Hasan Yusuf Barutcu",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hasan Yusuf Barutcu | Portfolyo",
+    description: "Modern teknolojilerle geliştirilmiş, jilet gibi bir portfolyo deneyimi.",
+  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
-  const languages = [
-    { code: "tr", name: "Türkçe" },
-    { code: "en", name: "English" },
-    { code: "de", name: "Deutsch" },
-    { code: "ru", name: "Русский" },
-    { code: "fr", name: "Français" },
-    { code: "es", name: "Español" },
-    { code: "zh", name: "中文" },
-    { code: "az", name: "Azərbaycanca" },
-    { code: "kk", name: "Қазақша" },
-    { code: "hi", name: "हिन्दी" }
-  ];
-
+}>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="bg-[#FAFAFA] text-slate-900 font-sans antialiased flex flex-col min-h-screen selection:bg-blue-100 selection:text-blue-900">
-        
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)]">
-          <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-10 h-10 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-slate-950 group-hover:text-blue-600 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 relative z-10">
-                  <path d="M12 2L2 19l4-2 6 5 6-5 4 2L12 2z" />
-                </svg>
-                <div className="absolute inset-0 bg-blue-100 rounded-full scale-0 group-hover:scale-125 transition-transform duration-500 opacity-50"></div>
-              </div>
-              <span className="font-extrabold text-xl tracking-tight text-slate-950 uppercase">HYB.</span>
-            </Link>
-
-            <nav className="hidden md:flex items-center gap-8">
-              <Link href="/portfolio" className="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors">Portfolio</Link>
-              <Link href="/info" className="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors">Info</Link>
-              <Link href="/contact" className="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors">Contact</Link>
-              <Link href="/login" className="text-sm font-bold bg-slate-950 text-white px-6 py-2.5 rounded-xl hover:bg-blue-600 hover:-translate-y-0.5 transition-all shadow-md hover:shadow-xl">Login</Link>
-            </nav>
-          </div>
-        </header>
-
-        <main className="flex-grow pt-20">
-          {children}
-        </main>
-
-        <footer className="bg-slate-950 text-slate-300 pt-24 pb-8 mt-20 relative overflow-hidden">
-          <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 relative z-10">
-            
-            <div className="flex flex-col items-start gap-10">
-              <Link href="/" className="flex items-center gap-3 group">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-9 h-9 text-white group-hover:text-blue-500 group-hover:-translate-y-1 transition-all duration-300">
-                  <path d="M12 2L2 19l4-2 6 5 6-5 4 2L12 2z" />
-                </svg>
-                <span className="font-extrabold text-2xl tracking-tight text-white uppercase">HYB.</span>
-              </Link>
+    // suppressHydrationWarning: next-themes kütüphanesinin sorunsuz çalışması için şarttır!
+    <html lang="tr" suppressHydrationWarning className="scroll-smooth">
+      <body className={`${jakarta.className} bg-[#FAFAFA] dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased min-h-screen flex flex-col transition-colors duration-500 selection:bg-blue-200 selection:text-blue-900 dark:selection:bg-blue-900 dark:selection:text-blue-100`}>
+        <ThemeProvider>
+          
+          {/* ================= HEADER (NAVBAR) ================= */}
+          <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/75 dark:bg-slate-950/75 border-b border-slate-200/50 dark:border-slate-800/50 transition-colors duration-500 shadow-sm">
+            <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
               
-              <nav className="flex flex-col gap-5">
-                <Link href="/" className="flex items-center gap-4 text-slate-400 hover:text-white transition-all group w-max">
-                  <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-500 transition-all shadow-lg"><LayoutDashboard size={18} /></div>
-                  <span className="font-semibold tracking-wide">Home</span>
-                </Link>
-                <Link href="/portfolio" className="flex items-center gap-4 text-slate-400 hover:text-white transition-all group w-max">
-                  <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-500 transition-all shadow-lg"><Briefcase size={18} /></div>
-                  <span className="font-semibold tracking-wide">Portfolio</span>
-                </Link>
-                <Link href="/info" className="flex items-center gap-4 text-slate-400 hover:text-white transition-all group w-max">
-                  <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-500 transition-all shadow-lg"><Info size={18} /></div>
-                  <span className="font-semibold tracking-wide">Info</span>
-                </Link>
-                <Link href="/contact" className="flex items-center gap-4 text-slate-400 hover:text-white transition-all group w-max">
-                  <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-500 transition-all shadow-lg"><Mail size={18} /></div>
-                  <span className="font-semibold tracking-wide">Contact</span>
-                </Link>
-                <Link href="/login" className="flex items-center gap-4 text-slate-400 hover:text-white transition-all group w-max">
-                  <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-500 transition-all shadow-lg"><LogIn size={18} /></div>
-                  <span className="font-semibold tracking-wide">Login</span>
-                </Link>
-              </nav>
-            </div>
+              {/* Logo */}
+              <Link href="/" className="text-2xl font-extrabold tracking-tighter text-slate-950 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+                HYB<span className="text-blue-600">.</span>
+              </Link>
 
-            <div className="flex flex-col items-start md:items-end justify-end pb-2">
-              <div className="relative group">
-                <button className="flex items-center gap-3 bg-slate-900 px-6 py-4 rounded-2xl border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition-all shadow-[0_0_30px_-10px_rgba(0,0,0,0.5)]">
-                  <Globe size={20} className="text-blue-500" />
-                  <span className="font-bold tracking-wide">Select Language</span>
-                  <ChevronUp size={18} className="text-slate-500 group-hover:text-slate-300 transition-colors" />
-                </button>
+              {/* Masaüstü Menü ve Tema Butonu */}
+              <div className="flex items-center gap-4 sm:gap-6">
+                <nav className="hidden md:flex items-center gap-6 text-sm font-bold text-slate-600 dark:text-slate-400">
+                  <Link href="/" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group">
+                    <Home size={16} className="group-hover:scale-110 transition-transform" /> Anasayfa
+                  </Link>
+                  <Link href="/info" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group">
+                    <User size={16} className="group-hover:scale-110 transition-transform" /> Hakkımda
+                  </Link>
+                  <Link href="/contact" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group">
+                    <Mail size={16} className="group-hover:scale-110 transition-transform" /> İletişim
+                  </Link>
+                  <Link href="/privacy" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group">
+                    <ShieldCheck size={16} className="group-hover:scale-110 transition-transform" /> Gizlilik
+                  </Link>
+                </nav>
 
-                <div className="absolute bottom-full right-0 mb-4 w-56 bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 p-2.5 z-50">
-                  <div className="max-h-64 overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-slate-700 [&::-webkit-scrollbar-thumb]:rounded-full pr-1 flex flex-col gap-1">
-                    {languages.map((lang) => (
-                      <a 
-                        key={lang.code} 
-                        href="#" 
-                        data-lang={lang.code} 
-                        className="lang-select-btn flex items-center gap-3 px-4 py-3 hover:bg-slate-800 rounded-xl transition-all text-slate-400 hover:text-white font-semibold hover:pl-5"
-                      >
-                        <span className="uppercase text-[10px] font-extrabold text-slate-500 bg-slate-950 px-2 py-1 rounded-md w-8 text-center">{lang.code}</span>
-                        {lang.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
+                {/* Ayıraç */}
+                <div className="w-px h-6 bg-slate-200 dark:bg-slate-800 hidden md:block"></div>
+
+                {/* Tema Değiştirme Butonu (ThemeToggle) */}
+                <ThemeToggle />
               </div>
+
             </div>
+          </header>
 
-          </div>
+          {/* ================= MAIN CONTENT ================= */}
+          <main className="flex-1 w-full relative">
+            {children}
+          </main>
 
-          <div className="max-w-5xl mx-auto px-6 mt-24 pt-8 border-t border-slate-800 flex justify-center">
-            <p className="text-slate-500 text-sm font-bold tracking-widest uppercase">
-              &copy; 2026 hasanyusufbarutcu.com.tr all right reserved.
-            </p>
-          </div>
-        </footer>
+          {/* ================= FOOTER ================= */}
+          <footer className="w-full bg-white dark:bg-slate-950 border-t border-slate-200/50 dark:border-slate-800/50 py-10 transition-colors duration-500">
+            <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+              
+              {/* Copyright */}
+              <div className="text-center md:text-left">
+                <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">
+                  © {new Date().getFullYear()} Hasan Yusuf Barutcu. Tüm hakları saklıdır.
+                </p>
+                <p className="text-slate-400 dark:text-slate-500 text-xs mt-1">
+                  Modern web teknolojileriyle sevgiyle kodlandı.
+                </p>
+              </div>
 
-        <CookieBanner />
+              {/* Sosyal Medya İkonları */}
+              <div className="flex items-center gap-4 text-slate-400 dark:text-slate-500">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors p-2 bg-slate-50 dark:bg-slate-900 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <Github size={20} />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-2 bg-slate-50 dark:bg-slate-900 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <Linkedin size={20} />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600 dark:hover:text-pink-400 transition-colors p-2 bg-slate-50 dark:bg-slate-900 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <Instagram size={20} />
+                </a>
+              </div>
 
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              document.addEventListener('DOMContentLoaded', () => {
-                const buttons = document.querySelectorAll('.lang-select-btn');
-                buttons.forEach(btn => {
-                  btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = btn.getAttribute('data-lang');
-                    document.cookie = "lang=" + lang + "; path=/; max-age=31536000";
-                    window.location.reload();
-                  });
-                });
-              });
-            `
-          }}
-        />
+            </div>
+          </footer>
+
+        </ThemeProvider>
       </body>
     </html>
   );
