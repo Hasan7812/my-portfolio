@@ -1,0 +1,102 @@
+{
+  "tr": {
+    "back": "Ana Sayfaya Dön",
+    "title": "Gizlilik Politikası",
+    "sec1_title": "1. Veri Toplama",
+    "sec1_desc": "Sitemizi ziyaret ettiğinizde yasal zorunluluklar ve analitik süreçler (hangi sayfaların daha çok okunduğunu anlamak) amacıyla anonim IP adresi ve tarayıcı bilgileriniz toplanır.",
+    "sec2_title": "2. Çerezler (Cookies)",
+    "sec2_desc": "Sitemizin dil seçeneklerini hatırlaması ve size özel deneyim sunabilmesi için tarayıcınızda geçici ve kalıcı çerezler (cookies) saklanmaktadır.",
+    "sec3_title": "3. Veri Güvenliği",
+    "sec3_desc": "Toplanan tüm veriler şifreli veritabanlarımızda güvenle saklanmakta olup, hiçbir koşulda üçüncü şahıs veya kurumlarla ticari amaçla paylaşılmamaktadır."
+  },
+  "en": {
+    "back": "Back to Home",
+    "title": "Privacy Policy",
+    "sec1_title": "1. Data Collection",
+    "sec1_desc": "When you visit our site, your anonymous IP address and browser information are collected for legal requirements and analytical processes (understanding which pages are viewed most).",
+    "sec2_title": "2. Cookies",
+    "sec2_desc": "Temporary and permanent cookies are stored in your browser so our site can remember your language preferences and provide a personalized experience.",
+    "sec3_title": "3. Data Security",
+    "sec3_desc": "All collected data is securely stored in our encrypted databases and is never shared with third parties or organizations for commercial purposes under any circumstances."
+  },
+  "de": {
+    "back": "Zurück zur Startseite",
+    "title": "Datenschutzrichtlinie",
+    "sec1_title": "1. Datenerfassung",
+    "sec1_desc": "Wenn Sie unsere Seite besuchen, werden Ihre anonyme IP-Adresse und Browserinformationen für gesetzliche Anforderungen und analytische Prozesse gesammelt.",
+    "sec2_title": "2. Cookies",
+    "sec2_desc": "Temporäre und permanente Cookies werden in Ihrem Browser gespeichert, damit unsere Seite sich an Ihre Spracheinstellungen erinnert und Ihnen ein personalisiertes Erlebnis bietet.",
+    "sec3_title": "3. Datensicherheit",
+    "sec3_desc": "Alle gesammelten Daten werden sicher in unseren verschlüsselten Datenbanken gespeichert und unter keinen Umständen für kommerzielle Zwecke an Dritte weitergegeben."
+  },
+  "ru": {
+    "back": "Вернуться на главную",
+    "title": "Политика конфиденциальности",
+    "sec1_title": "1. Сбор данных",
+    "sec1_desc": "При посещении нашего сайта ваш анонимный IP-адрес и информация о браузере собираются для соблюдения юридических требований и аналитики.",
+    "sec2_title": "2. Файлы Cookie",
+    "sec2_desc": "Временные и постоянные файлы cookie сохраняются в вашем браузере, чтобы наш сайт мог запомнить ваши языковые настройки и обеспечить персонализированный опыт.",
+    "sec3_title": "3. Безопасность данных",
+    "sec3_desc": "Все собранные данные надежно хранятся в наших зашифрованных базах данных и ни при каких обстоятельствах не передаются третьим лицам в коммерческих целях."
+  },
+  "fr": {
+    "back": "Retour à l'accueil",
+    "title": "Politique de confidentialité",
+    "sec1_title": "1. Collecte de données",
+    "sec1_desc": "Lorsque vous visitez notre site, votre adresse IP anonyme et les informations de votre navigateur sont collectées pour des exigences légales et des processus analytiques.",
+    "sec2_title": "2. Cookies",
+    "sec2_desc": "Des cookies temporaires et permanents sont stockés dans votre navigateur pour que notre site mémorise vos préférences linguistiques et vous offre une expérience personnalisée.",
+    "sec3_title": "3. Sécurité des données",
+    "sec3_desc": "Toutes les données collectées sont stockées en toute sécurité dans nos bases de données cryptées et ne sont en aucun cas partagées avec des tiers à des fins commerciales."
+  },
+  "es": {
+    "back": "Volver al inicio",
+    "title": "Política de Privacidad",
+    "sec1_title": "1. Recopilación de datos",
+    "sec1_desc": "Cuando visita nuestro sitio, su dirección IP anónima e información del navegador se recopilan para requisitos legales y procesos analíticos.",
+    "sec2_title": "2. Cookies",
+    "sec2_desc": "Las cookies temporales y permanentes se almacenan en su navegador para que nuestro sitio pueda recordar sus preferencias de idioma y brindarle una experiencia personalizada.",
+    "sec3_title": "3. Seguridad de datos",
+    "sec3_desc": "Todos los datos recopilados se almacenan de forma segura en nuestras bases de datos cifradas y bajo ninguna circunstancia se comparten con terceros con fines comerciales."
+  },
+  "zh": {
+    "back": "返回首页",
+    "title": "隐私政策",
+    "sec1_title": "1. 数据收集",
+    "sec1_desc": "当您访问我们的网站时，出于法律要求和分析过程的目的，我们会收集您的匿名 IP 地址和浏览器信息。",
+    "sec2_title": "2. Cookies",
+    "sec2_desc": "临时和永久的 cookie 会存储在您的浏览器中，以便我们的网站能够记住您的语言偏好并提供个性化体验。",
+    "sec3_title": "3. 数据安全",
+    "sec3_desc": "所有收集的数据都安全地存储在我们加密的数据库中，在任何情况下都不会出于商业目的与第三方共享。"
+  },
+  "az": {
+    "back": "Ana Səhifəyə Qayıt",
+    "title": "Məxfilik Siyasəti",
+    "sec1_title": "1. Məlumatların Toplanması",
+    "sec1_desc": "Saytımızı ziyarət etdiyiniz zaman qanuni tələblər və analitik proseslər (hansı səhifələrin daha çox oxunduğunu anlamaq) məqsədilə anonim IP ünvanı və brauzer məlumatlarınız toplanır.",
+    "sec2_title": "2. Çərəzlər (Cookies)",
+    "sec2_desc": "Saytımızın dil seçimlərinizi xatırlaması və sizə xüsusi təcrübə təqdim edə bilməsi üçün brauzerinizdə müvəqqəti və daimi çərəzlər (cookies) saxlanılır.",
+    "sec3_title": "3. Məlumat Təhlükəsizliyi",
+    "sec3_desc": "Toplanan bütün məlumatlar şifrəli verilənlər bazalarımızda güvənlə saxlanılır və heç bir halda kommersiya məqsədilə üçüncü şəxs və ya qurumlarla paylaşılmır."
+  },
+  "kk": {
+    "back": "Басты бетке оралу",
+    "title": "Құпиялылық саясаты",
+    "sec1_title": "1. Деректерді жинау",
+    "sec1_desc": "Біздің сайтқа кірген кезде заңды талаптар мен аналитикалық процестер үшін анонимді IP мекенжайыңыз бен шолғыш ақпаратыңыз жиналады.",
+    "sec2_title": "2. Cookies",
+    "sec2_desc": "Біздің сайт тіл қалауыңызды есте сақтап, жекелендірілген тәжірибе ұсынуы үшін шолғышыңызда уақытша және тұрақты cookie файлдары сақталады.",
+    "sec3_title": "3. Деректер қауіпсіздігі",
+    "sec3_desc": "Барлық жиналған деректер шифрланған дерекқорларымызда қауіпсіз сақталады және ешқандай жағдайда коммерциялық мақсатта үшінші тараптармен бөлісілмейді."
+  },
+  "hi": {
+    "back": "होम पर वापस जाएँ",
+    "title": "गोपनीयता नीति",
+    "sec1_title": "1. डेटा संग्रह",
+    "sec1_desc": "जब आप हमारी साइट पर जाते हैं, तो कानूनी आवश्यकताओं और विश्लेषणात्मक प्रक्रियाओं के लिए आपका अनाम आईपी पता और ब्राउज़र जानकारी एकत्र की जाती है।",
+    "sec2_title": "2. कुकीज़",
+    "sec2_desc": "आपके ब्राउज़र में अस्थायी और स्थायी कुकीज़ सहेजी जाती हैं ताकि हमारी साइट आपकी भाषा प्राथमिकताओं को याद रख सके और एक व्यक्तिगत अनुभव प्रदान कर सके।",
+    "sec3_title": "3. डेटा सुरक्षा",
+    "sec3_desc": "एकत्र किया गया सभी डेटा हमारे एन्क्रिप्टेड डेटाबेस में सुरक्षित रूप से संग्रहीत किया जाता है और किसी भी परिस्थिति में वाणिज्यिक उद्देश्यों के लिए तीसरे पक्ष के साथ साझा नहीं किया जाता है।"
+  }
+}

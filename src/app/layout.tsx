@@ -35,12 +35,12 @@ export default function RootLayout({
           <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative w-10 h-10 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-slate-950 group-hover:text-blue-600 group-hover:scale-110 transition-all duration-300 relative z-10">
-                  <path d="M22 2L12 10L2 2l4 10-6 4 10 2 2 6 2-6 10-2-6-4 4-10z"/>
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-slate-950 group-hover:text-blue-600 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 relative z-10">
+                  <path d="M12 2L2 19l4-2 6 5 6-5 4 2L12 2z" />
                 </svg>
                 <div className="absolute inset-0 bg-blue-100 rounded-full scale-0 group-hover:scale-125 transition-transform duration-500 opacity-50"></div>
               </div>
-              <span className="font-extrabold text-xl tracking-tight text-slate-950">HYB.</span>
+              <span className="font-extrabold text-xl tracking-tight text-slate-950 uppercase">HYB.</span>
             </Link>
 
             <nav className="hidden md:flex items-center gap-8">
@@ -61,10 +61,10 @@ export default function RootLayout({
             
             <div className="flex flex-col items-start gap-10">
               <Link href="/" className="flex items-center gap-3 group">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-9 h-9 text-white group-hover:text-blue-500 transition-colors">
-                  <path d="M22 2L12 10L2 2l4 10-6 4 10 2 2 6 2-6 10-2-6-4 4-10z"/>
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-9 h-9 text-white group-hover:text-blue-500 group-hover:-translate-y-1 transition-all duration-300">
+                  <path d="M12 2L2 19l4-2 6 5 6-5 4 2L12 2z" />
                 </svg>
-                <span className="font-extrabold text-2xl tracking-tight text-white">HYB.</span>
+                <span className="font-extrabold text-2xl tracking-tight text-white uppercase">HYB.</span>
               </Link>
               
               <nav className="flex flex-col gap-5">
