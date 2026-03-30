@@ -1,0 +1,49 @@
+// 1. Prisma Client Ayarları
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 2. Veritabanı Bağlantı Ayarları (URL artık prisma.config.ts'den gelecek)
+datasource db {
+  provider = "postgresql" 
+}
+
+// 3. Kullanıcılar Tablosu (Users)
+model User {
+  id            String   @id @default(cuid()) 
+  username      String   @unique              
+  displayName   String?                       
+  password      String                        
+  isAdmin       Int      @default(0)          
+  isVip         Int      @default(0)          
+  isCorporate   Int      @default(0)          
+  cookieId      String?  @unique              
+  trackingId    String?  @unique              
+  roleColor     String?                       
+  createdAt     DateTime @default(now())      
+  updatedAt     DateTime @updatedAt           
+}
+
+// 4. Erişim Kodları Tablosu (Access Codes - Yeni kayıtlar için)
+model AccessCode {
+  id             Int      @id @default(autoincrement())
+  code           String   @unique              
+  targetUsername String                        
+  isCorporate    Int      @default(0)          
+  isVip          Int      @default(0)          
+  isAdmin        Int      @default(0)          
+  assignedColor  String?                       
+  isUsed         Boolean  @default(false)      
+  createdAt      DateTime @default(now())
+}
+
+// 5. Giriş/Kurtarma Kodları Tablosu (Login Codes - Var olan hesaplar için)
+model LoginCode {
+  id              Int      @id @default(autoincrement())
+  code            String   @unique              
+  userId          String?                       
+  usageCount      Int      @default(1)          
+  isPasswordReset Boolean  @default(false)      
+  isAdminLogin    Boolean  @default(false)      
+  createdAt       DateTime @default(now())
+}
